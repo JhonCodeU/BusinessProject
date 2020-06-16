@@ -220,6 +220,33 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Design\bootstrap_4.5.0\css\bootstrap-grid.css" />
+    <Content Include="Design\bootstrap_4.5.0\css\bootstrap-grid.min.css" />
+    <Content Include="Design\bootstrap_4.5.0\css\bootstrap-reboot.css" />
+    <Content Include="Design\bootstrap_4.5.0\css\bootstrap-reboot.min.css" />
+    <Content Include="Design\bootstrap_4.5.0\css\bootstrap.css" />
+    <Content Include="Design\bootstrap_4.5.0\css\bootstrap.min.css" />
+    <Content Include="Design\bootstrap_4.5.0\js\bootstrap.bundle.js" />
+    <Content Include="Design\bootstrap_4.5.0\js\bootstrap.bundle.min.js" />
+    <Content Include="Design\bootstrap_4.5.0\js\bootstrap.js" />
+    <Content Include="Design\bootstrap_4.5.0\js\bootstrap.min.js" />
+    <Content Include="Design\Error\css\style.css" />
+    <Content Include="Design\Error\readme.txt" />
+    <Content Include="Design\Home\assets\css\font-awesome.min.css" />
+    <Content Include="Design\Home\assets\css\main.css" />
+    <Content Include="Design\Home\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Design\Home\assets\js\breakpoints.min.js" />
+    <Content Include="Design\Home\assets\js\browser.min.js" />
+    <Content Include="Design\Home\assets\js\jquery.min.js" />
+    <Content Include="Design\Home\assets\js\main.js" />
+    <Content Include="Design\Home\assets\js\util.js" />
+    <Content Include="Design\Home\images\banner.jpg" />
+    <Content Include="Design\Home\images\banner.mp4" />
+    <Content Include="Design\Home\images\bg.jpg" />
+    <Content Include="Design\Home\images\pic01.jpg" />
+    <Content Include="Design\Home\images\pic02.jpg" />
+    <Content Include="Design\Home\images\pic03.jpg" />
+    <Content Include="Design\Home\images\unnamed.jpg" />
     <Content Include="Design\login\css\main.css" />
     <Content Include="Design\login\css\util.css" />
     <Content Include="Design\login\fonts\font-awesome-4.7.0\css\font-awesome.css" />
@@ -279,8 +306,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -358,6 +383,53 @@
     <Content Include="Design\login\fonts\oswald\Oswald-Medium.ttf" />
     <Content Include="Design\login\fonts\oswald\Oswald-Regular.ttf" />
     <Content Include="Design\login\fonts\oswald\Oswald-SemiBold.ttf" />
+    <Content Include="Design\Home\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Design\Home\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Design\Home\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Design\Home\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Design\Home\assets\fonts\FontAwesome.otf" />
+    <Content Include="Design\Home\assets\sass\base\_page.scss" />
+    <Content Include="Design\Home\assets\sass\base\_reset.scss" />
+    <Content Include="Design\Home\assets\sass\base\_typography.scss" />
+    <Content Include="Design\Home\assets\sass\components\_actions.scss" />
+    <Content Include="Design\Home\assets\sass\components\_box.scss" />
+    <Content Include="Design\Home\assets\sass\components\_button.scss" />
+    <Content Include="Design\Home\assets\sass\components\_form.scss" />
+    <Content Include="Design\Home\assets\sass\components\_grid.scss" />
+    <Content Include="Design\Home\assets\sass\components\_highlights.scss" />
+    <Content Include="Design\Home\assets\sass\components\_icon.scss" />
+    <Content Include="Design\Home\assets\sass\components\_icons.scss" />
+    <Content Include="Design\Home\assets\sass\components\_image.scss" />
+    <Content Include="Design\Home\assets\sass\components\_inner.scss" />
+    <Content Include="Design\Home\assets\sass\components\_list.scss" />
+    <Content Include="Design\Home\assets\sass\components\_table.scss" />
+    <Content Include="Design\Home\assets\sass\components\_testimonials.scss" />
+    <Content Include="Design\Home\assets\sass\components\_wrapper.scss" />
+    <Content Include="Design\Home\assets\sass\layout\_banner.scss" />
+    <Content Include="Design\Home\assets\sass\layout\_cta.scss" />
+    <Content Include="Design\Home\assets\sass\layout\_footer.scss" />
+    <Content Include="Design\Home\assets\sass\layout\_header.scss" />
+    <Content Include="Design\Home\assets\sass\layout\_heading.scss" />
+    <Content Include="Design\Home\assets\sass\layout\_main.scss" />
+    <Content Include="Design\Home\assets\sass\layout\_menu.scss" />
+    <Content Include="Design\Home\assets\sass\libs\_breakpoints.scss" />
+    <Content Include="Design\Home\assets\sass\libs\_flexgrid.scss" />
+    <Content Include="Design\Home\assets\sass\libs\_functions.scss" />
+    <Content Include="Design\Home\assets\sass\libs\_grid.scss" />
+    <Content Include="Design\Home\assets\sass\libs\_mixins.scss" />
+    <Content Include="Design\Home\assets\sass\libs\_vars.scss" />
+    <Content Include="Design\Home\assets\sass\libs\_vendor.scss" />
+    <Content Include="Design\Home\assets\sass\main.scss" />
+    <Content Include="Design\bootstrap_4.5.0\css\bootstrap-grid.css.map" />
+    <Content Include="Design\bootstrap_4.5.0\css\bootstrap-grid.min.css.map" />
+    <Content Include="Design\bootstrap_4.5.0\css\bootstrap-reboot.css.map" />
+    <Content Include="Design\bootstrap_4.5.0\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Design\bootstrap_4.5.0\css\bootstrap.css.map" />
+    <Content Include="Design\bootstrap_4.5.0\css\bootstrap.min.css.map" />
+    <Content Include="Design\bootstrap_4.5.0\js\bootstrap.bundle.js.map" />
+    <Content Include="Design\bootstrap_4.5.0\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Design\bootstrap_4.5.0\js\bootstrap.js.map" />
+    <Content Include="Design\bootstrap_4.5.0\js\bootstrap.min.js.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -459,7 +531,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\ErrorController\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
