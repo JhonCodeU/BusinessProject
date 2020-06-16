@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BusinessProjectModelStoreContainer" CdmEntityContainer="BusinessProjectEntities">
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="BusinessProjectModel.customer">
+        <MappingFragment StoreEntitySet="customer">
+          <ScalarProperty Name="idCustomer" ColumnName="idCustomer" />
+          <ScalarProperty Name="nameCustomer" ColumnName="nameCustomer" />
+          <ScalarProperty Name="addressCustomer" ColumnName="addressCustomer" />
+          <ScalarProperty Name="phoneCustomer" ColumnName="phoneCustomer" />
+          <ScalarProperty Name="dateBirthdayCustomer" ColumnName="dateBirthdayCustomer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customerServices">
+      <EntityTypeMapping TypeName="BusinessProjectModel.customerService">
+        <MappingFragment StoreEntitySet="customerService">
+          <ScalarProperty Name="idCustomerService" ColumnName="idCustomerService" />
+          <ScalarProperty Name="fkidCustomer" ColumnName="fkidCustomer" />
+          <ScalarProperty Name="fkidService" ColumnName="fkidService" />
+          <ScalarProperty Name="sessionsNumber" ColumnName="sessionsNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="BusinessProjectModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="idEmployee" ColumnName="idEmployee" />
+          <ScalarProperty Name="nameEmployee" ColumnName="nameEmployee" />
+          <ScalarProperty Name="addressEmployee" ColumnName="addressEmployee" />
+          <ScalarProperty Name="phoneEmployee" ColumnName="phoneEmployee" />
+          <ScalarProperty Name="dateBirthayEmployee" ColumnName="dateBirthayEmployee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="moduloes">
+      <EntityTypeMapping TypeName="BusinessProjectModel.modulo">
+        <MappingFragment StoreEntitySet="modulo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="operaciones">
+      <EntityTypeMapping TypeName="BusinessProjectModel.operacione">
+        <MappingFragment StoreEntitySet="operaciones">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idModulo" ColumnName="idModulo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="providers">
+      <EntityTypeMapping TypeName="BusinessProjectModel.provider">
+        <MappingFragment StoreEntitySet="provider">
+          <ScalarProperty Name="idProvider" ColumnName="idProvider" />
+          <ScalarProperty Name="nameProvider" ColumnName="nameProvider" />
+          <ScalarProperty Name="addressProvider" ColumnName="addressProvider" />
+          <ScalarProperty Name="emailAddressProvider" ColumnName="emailAddressProvider" />
+          <ScalarProperty Name="phoneProvider" ColumnName="phoneProvider" />
+          <ScalarProperty Name="descriptionProvider" ColumnName="descriptionProvider" />
+          <ScalarProperty Name="fkTypeProvider" ColumnName="fkTypeProvider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProviderServices">
+      <EntityTypeMapping TypeName="BusinessProjectModel.ProviderService">
+        <MappingFragment StoreEntitySet="ProviderService">
+          <ScalarProperty Name="idProviderService" ColumnName="idProviderService" />
+          <ScalarProperty Name="fkIdProvider" ColumnName="fkIdProvider" />
+          <ScalarProperty Name="fkIdService" ColumnName="fkIdService" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rols">
+      <EntityTypeMapping TypeName="BusinessProjectModel.rol">
+        <MappingFragment StoreEntitySet="rol">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rol_operacion">
+      <EntityTypeMapping TypeName="BusinessProjectModel.rol_operacion">
+        <MappingFragment StoreEntitySet="rol_operacion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idRol" ColumnName="idRol" />
+          <ScalarProperty Name="idOperacion" ColumnName="idOperacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesMen">
+      <EntityTypeMapping TypeName="BusinessProjectModel.SalesMan">
+        <MappingFragment StoreEntitySet="SalesMan">
+          <ScalarProperty Name="idSalesMan" ColumnName="idSalesMan" />
+          <ScalarProperty Name="nameSalesman" ColumnName="nameSalesman" />
+          <ScalarProperty Name="addressSalesMan" ColumnName="addressSalesMan" />
+          <ScalarProperty Name="emailAddressSalesMan" ColumnName="emailAddressSalesMan" />
+          <ScalarProperty Name="phoneProvider" ColumnName="phoneProvider" />
+          <ScalarProperty Name="salarySalesMan" ColumnName="salarySalesMan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="BusinessProjectModel.Service">
+        <MappingFragment StoreEntitySet="Service">
+          <ScalarProperty Name="idService" ColumnName="idService" />
+          <ScalarProperty Name="nameService" ColumnName="nameService" />
+          <ScalarProperty Name="descriptionService" ColumnName="descriptionService" />
+          <ScalarProperty Name="startDateService" ColumnName="startDateService" />
+          <ScalarProperty Name="endDateService" ColumnName="endDateService" />
+          <ScalarProperty Name="valueService" ColumnName="valueService" />
+          <ScalarProperty Name="commissionPercentageBusinessService" ColumnName="commissionPercentageBusinessService" />
+          <ScalarProperty Name="commissionPercentageSalesManService" ColumnName="commissionPercentageSalesManService" />
+          <ScalarProperty Name="imageUrlServices" ColumnName="imageUrlServices" />
+          <ScalarProperty Name="imageServices" ColumnName="imageServices" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceSalesmen">
+      <EntityTypeMapping TypeName="BusinessProjectModel.ServiceSalesman">
+        <MappingFragment StoreEntitySet="ServiceSalesman">
+          <ScalarProperty Name="idServiceSalesman" ColumnName="idServiceSalesman" />
+          <ScalarProperty Name="fkidService" ColumnName="fkidService" />
+          <ScalarProperty Name="fkIdSalesman" ColumnName="fkIdSalesman" />
+          <ScalarProperty Name="totalCommissionServiceSalesman" ColumnName="totalCommissionServiceSalesman" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sessions">
+      <EntityTypeMapping TypeName="BusinessProjectModel.Session">
+        <MappingFragment StoreEntitySet="Session">
+          <ScalarProperty Name="idSession" ColumnName="idSession" />
+          <ScalarProperty Name="dateSession" ColumnName="dateSession" />
+          <ScalarProperty Name="startTimeSession" ColumnName="startTimeSession" />
+          <ScalarProperty Name="durationSession" ColumnName="durationSession" />
+          <ScalarProperty Name="statusSession" ColumnName="statusSession" />
+          <ScalarProperty Name="fkIdEmployee" ColumnName="fkIdEmployee" />
+          <ScalarProperty Name="fkIdCustomer" ColumnName="fkIdCustomer" />
+          <ScalarProperty Name="fkIdService" ColumnName="fkIdService" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BusinessProjectModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="typeProviders">
+      <EntityTypeMapping TypeName="BusinessProjectModel.typeProvider">
+        <MappingFragment StoreEntitySet="typeProvider">
+          <ScalarProperty Name="idProvider" ColumnName="idProvider" />
+          <ScalarProperty Name="nameTypeProvider" ColumnName="nameTypeProvider" />
+          <ScalarProperty Name="descriptionProvider" ColumnName="descriptionProvider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="BusinessProjectModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="idRol" ColumnName="idRol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

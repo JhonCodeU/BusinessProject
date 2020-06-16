@@ -1,0 +1,58 @@
+﻿@model BusinessProject.Models.SalesMan
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SalesMan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nameSalesman)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nameSalesman)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.addressSalesMan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.addressSalesMan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emailAddressSalesMan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailAddressSalesMan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phoneProvider)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phoneProvider)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salarySalesMan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salarySalesMan)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idSalesMan }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

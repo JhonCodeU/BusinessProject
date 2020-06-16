@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a9b2d1538ef14853a5e44285fcb76c67" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="BusinessProjectModel.customer" Width="1.5" PointX="0.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessProjectModel.customerService" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessProjectModel.Employee" Width="1.5" PointX="3.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessProjectModel.modulo" Width="1.5" PointX="6.5" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessProjectModel.operacione" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessProjectModel.provider" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessProjectModel.ProviderService" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessProjectModel.rol" Width="1.5" PointX="8.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessProjectModel.rol_operacion" Width="1.5" PointX="11" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessProjectModel.SalesMan" Width="1.5" PointX="0.75" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessProjectModel.Service" Width="1.5" PointX="0.5" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessProjectModel.ServiceSalesman" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessProjectModel.Session" Width="1.5" PointX="6" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessProjectModel.sysdiagram" Width="1.5" PointX="8.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessProjectModel.typeProvider" Width="1.5" PointX="1.5" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BusinessProjectModel.usuario" Width="1.5" PointX="11" PointY="6.25" IsExpanded="true" />
+        <AssociationConnector Association="BusinessProjectModel.FK__customerS__fkidC__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessProjectModel.FK__Session__fkIdCus__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessProjectModel.FK__customerS__fkidS__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessProjectModel.FK__Session__fkIdEmp__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessProjectModel.FK_operaciones_modulo" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessProjectModel.FK_rol_operacion_operaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessProjectModel.FK__provider__fkType__145C0A3F" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessProjectModel.FK__ProviderS__fkIdP__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessProjectModel.FK__ProviderS__fkIdS__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessProjectModel.FK_rol_operacion_rol" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessProjectModel.FK_usuario_rol" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessProjectModel.FK__ServiceSa__fkIdS__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessProjectModel.FK__ServiceSa__fkidS__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="BusinessProjectModel.FK__Session__fkIdSer__49C3F6B7" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

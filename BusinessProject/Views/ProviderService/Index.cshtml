@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BusinessProject.Models.ProviderService>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.provider.nameProvider)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Service.nameService)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.provider.nameProvider)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Service.nameService)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idProviderService }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idProviderService }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idProviderService })
+        </td>
+    </tr>
+}
+
+</table>

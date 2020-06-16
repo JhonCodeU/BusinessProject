@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BusinessProject.Models.provider>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nameProvider)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.addressProvider)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emailAddressProvider)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phoneProvider)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descriptionProvider)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.typeProvider.nameTypeProvider)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nameProvider)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.addressProvider)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emailAddressProvider)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phoneProvider)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descriptionProvider)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.typeProvider.nameTypeProvider)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idProvider }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idProvider }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idProvider })
+        </td>
+    </tr>
+}
+
+</table>

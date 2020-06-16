@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BusinessProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="idCustomer" />
+    </Key>
+    <Property Name="idCustomer" Type="int" Nullable="false" />
+    <Property Name="nameCustomer" Type="varchar" MaxLength="30" />
+    <Property Name="addressCustomer" Type="varchar" MaxLength="70" />
+    <Property Name="phoneCustomer" Type="int" />
+    <Property Name="dateBirthdayCustomer" Type="datetime" />
+  </EntityType>
+  <EntityType Name="customerService">
+    <Key>
+      <PropertyRef Name="idCustomerService" />
+    </Key>
+    <Property Name="idCustomerService" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fkidCustomer" Type="int" />
+    <Property Name="fkidService" Type="int" />
+    <Property Name="sessionsNumber" Type="int" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="idEmployee" />
+    </Key>
+    <Property Name="idEmployee" Type="int" Nullable="false" />
+    <Property Name="nameEmployee" Type="varchar" MaxLength="30" />
+    <Property Name="addressEmployee" Type="varchar" MaxLength="70" />
+    <Property Name="phoneEmployee" Type="int" />
+    <Property Name="dateBirthayEmployee" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="modulo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="operaciones">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="idModulo" Type="int" />
+  </EntityType>
+  <EntityType Name="provider">
+    <Key>
+      <PropertyRef Name="idProvider" />
+    </Key>
+    <Property Name="idProvider" Type="int" Nullable="false" />
+    <Property Name="nameProvider" Type="varchar" MaxLength="30" />
+    <Property Name="addressProvider" Type="varchar" MaxLength="70" />
+    <Property Name="emailAddressProvider" Type="varchar" MaxLength="75" />
+    <Property Name="phoneProvider" Type="int" />
+    <Property Name="descriptionProvider" Type="varchar" MaxLength="150" />
+    <Property Name="fkTypeProvider" Type="int" />
+  </EntityType>
+  <EntityType Name="ProviderService">
+    <Key>
+      <PropertyRef Name="idProviderService" />
+    </Key>
+    <Property Name="idProviderService" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fkIdProvider" Type="int" />
+    <Property Name="fkIdService" Type="int" />
+  </EntityType>
+  <EntityType Name="rol">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="rol_operacion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idRol" Type="int" />
+    <Property Name="idOperacion" Type="int" />
+  </EntityType>
+  <EntityType Name="SalesMan">
+    <Key>
+      <PropertyRef Name="idSalesMan" />
+    </Key>
+    <Property Name="idSalesMan" Type="int" Nullable="false" />
+    <Property Name="nameSalesman" Type="varchar" MaxLength="30" />
+    <Property Name="addressSalesMan" Type="varchar" MaxLength="70" />
+    <Property Name="emailAddressSalesMan" Type="varchar" MaxLength="70" />
+    <Property Name="phoneProvider" Type="int" />
+    <Property Name="salarySalesMan" Type="float" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="idService" />
+    </Key>
+    <Property Name="idService" Type="int" Nullable="false" />
+    <Property Name="nameService" Type="varchar" MaxLength="25" />
+    <Property Name="descriptionService" Type="varchar" MaxLength="100" />
+    <Property Name="startDateService" Type="smalldatetime" />
+    <Property Name="endDateService" Type="smalldatetime" />
+    <Property Name="valueService" Type="float" />
+    <Property Name="commissionPercentageBusinessService" Type="int" />
+    <Property Name="commissionPercentageSalesManService" Type="int" />
+    <Property Name="imageUrlServices" Type="varchar" MaxLength="255" />
+    <Property Name="imageServices" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="ServiceSalesman">
+    <Key>
+      <PropertyRef Name="idServiceSalesman" />
+    </Key>
+    <Property Name="idServiceSalesman" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fkidService" Type="int" />
+    <Property Name="fkIdSalesman" Type="int" />
+    <Property Name="totalCommissionServiceSalesman" Type="int" />
+  </EntityType>
+  <EntityType Name="Session">
+    <Key>
+      <PropertyRef Name="idSession" />
+    </Key>
+    <Property Name="idSession" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dateSession" Type="datetime" />
+    <Property Name="startTimeSession" Type="datetime" />
+    <Property Name="durationSession" Type="int" />
+    <Property Name="statusSession" Type="varchar" MaxLength="1" />
+    <Property Name="fkIdEmployee" Type="int" />
+    <Property Name="fkIdCustomer" Type="int" />
+    <Property Name="fkIdService" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="typeProvider">
+    <Key>
+      <PropertyRef Name="idProvider" />
+    </Key>
+    <Property Name="idProvider" Type="int" Nullable="false" />
+    <Property Name="nameTypeProvider" Type="varchar" MaxLength="20" />
+    <Property Name="descriptionProvider" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="200" />
+    <Property Name="fecha" Type="datetime" />
+    <Property Name="idRol" Type="int" />
+  </EntityType>
+  <Association Name="FK__customerS__fkidC__3C69FB99">
+    <End Role="customer" Type="Self.customer" Multiplicity="0..1" />
+    <End Role="customerService" Type="Self.customerService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="idCustomer" />
+      </Principal>
+      <Dependent Role="customerService">
+        <PropertyRef Name="fkidCustomer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__customerS__fkidS__3D5E1FD2">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="customerService" Type="Self.customerService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="idService" />
+      </Principal>
+      <Dependent Role="customerService">
+        <PropertyRef Name="fkidService" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__provider__fkType__145C0A3F">
+    <End Role="typeProvider" Type="Self.typeProvider" Multiplicity="0..1" />
+    <End Role="provider" Type="Self.provider" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="typeProvider">
+        <PropertyRef Name="idProvider" />
+      </Principal>
+      <Dependent Role="provider">
+        <PropertyRef Name="fkTypeProvider" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProviderS__fkIdP__403A8C7D">
+    <End Role="provider" Type="Self.provider" Multiplicity="0..1" />
+    <End Role="ProviderService" Type="Self.ProviderService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="provider">
+        <PropertyRef Name="idProvider" />
+      </Principal>
+      <Dependent Role="ProviderService">
+        <PropertyRef Name="fkIdProvider" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProviderS__fkIdS__412EB0B6">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="ProviderService" Type="Self.ProviderService" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="idService" />
+      </Principal>
+      <Dependent Role="ProviderService">
+        <PropertyRef Name="fkIdService" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServiceSa__fkidS__440B1D61">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="ServiceSalesman" Type="Self.ServiceSalesman" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="idService" />
+      </Principal>
+      <Dependent Role="ServiceSalesman">
+        <PropertyRef Name="fkidService" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServiceSa__fkIdS__44FF419A">
+    <End Role="SalesMan" Type="Self.SalesMan" Multiplicity="0..1" />
+    <End Role="ServiceSalesman" Type="Self.ServiceSalesman" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesMan">
+        <PropertyRef Name="idSalesMan" />
+      </Principal>
+      <Dependent Role="ServiceSalesman">
+        <PropertyRef Name="fkIdSalesman" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Session__fkIdCus__48CFD27E">
+    <End Role="customer" Type="Self.customer" Multiplicity="0..1" />
+    <End Role="Session" Type="Self.Session" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="idCustomer" />
+      </Principal>
+      <Dependent Role="Session">
+        <PropertyRef Name="fkIdCustomer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Session__fkIdEmp__47DBAE45">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="Session" Type="Self.Session" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="idEmployee" />
+      </Principal>
+      <Dependent Role="Session">
+        <PropertyRef Name="fkIdEmployee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Session__fkIdSer__49C3F6B7">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="Session" Type="Self.Session" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="idService" />
+      </Principal>
+      <Dependent Role="Session">
+        <PropertyRef Name="fkIdService" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_operaciones_modulo">
+    <End Role="modulo" Type="Self.modulo" Multiplicity="0..1" />
+    <End Role="operaciones" Type="Self.operaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="modulo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="operaciones">
+        <PropertyRef Name="idModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rol_operacion_operaciones">
+    <End Role="operaciones" Type="Self.operaciones" Multiplicity="0..1" />
+    <End Role="rol_operacion" Type="Self.rol_operacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="operaciones">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="rol_operacion">
+        <PropertyRef Name="idOperacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rol_operacion_rol">
+    <End Role="rol" Type="Self.rol" Multiplicity="0..1" />
+    <End Role="rol_operacion" Type="Self.rol_operacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rol">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="rol_operacion">
+        <PropertyRef Name="idRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_usuario_rol">
+    <End Role="rol" Type="Self.rol" Multiplicity="0..1" />
+    <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rol">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="usuario">
+        <PropertyRef Name="idRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BusinessProjectModelStoreContainer">
+    <EntitySet Name="customer" EntityType="Self.customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customerService" EntityType="Self.customerService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="modulo" EntityType="Self.modulo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="operaciones" EntityType="Self.operaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="provider" EntityType="Self.provider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProviderService" EntityType="Self.ProviderService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rol" EntityType="Self.rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="rol_operacion" EntityType="Self.rol_operacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SalesMan" EntityType="Self.SalesMan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServiceSalesman" EntityType="Self.ServiceSalesman" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Session" EntityType="Self.Session" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="typeProvider" EntityType="Self.typeProvider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__customerS__fkidC__3C69FB99" Association="Self.FK__customerS__fkidC__3C69FB99">
+      <End Role="customer" EntitySet="customer" />
+      <End Role="customerService" EntitySet="customerService" />
+    </AssociationSet>
+    <AssociationSet Name="FK__customerS__fkidS__3D5E1FD2" Association="Self.FK__customerS__fkidS__3D5E1FD2">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="customerService" EntitySet="customerService" />
+    </AssociationSet>
+    <AssociationSet Name="FK__provider__fkType__145C0A3F" Association="Self.FK__provider__fkType__145C0A3F">
+      <End Role="typeProvider" EntitySet="typeProvider" />
+      <End Role="provider" EntitySet="provider" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProviderS__fkIdP__403A8C7D" Association="Self.FK__ProviderS__fkIdP__403A8C7D">
+      <End Role="provider" EntitySet="provider" />
+      <End Role="ProviderService" EntitySet="ProviderService" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProviderS__fkIdS__412EB0B6" Association="Self.FK__ProviderS__fkIdS__412EB0B6">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="ProviderService" EntitySet="ProviderService" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServiceSa__fkidS__440B1D61" Association="Self.FK__ServiceSa__fkidS__440B1D61">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="ServiceSalesman" EntitySet="ServiceSalesman" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServiceSa__fkIdS__44FF419A" Association="Self.FK__ServiceSa__fkIdS__44FF419A">
+      <End Role="SalesMan" EntitySet="SalesMan" />
+      <End Role="ServiceSalesman" EntitySet="ServiceSalesman" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Session__fkIdCus__48CFD27E" Association="Self.FK__Session__fkIdCus__48CFD27E">
+      <End Role="customer" EntitySet="customer" />
+      <End Role="Session" EntitySet="Session" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Session__fkIdEmp__47DBAE45" Association="Self.FK__Session__fkIdEmp__47DBAE45">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Session" EntitySet="Session" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Session__fkIdSer__49C3F6B7" Association="Self.FK__Session__fkIdSer__49C3F6B7">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="Session" EntitySet="Session" />
+    </AssociationSet>
+    <AssociationSet Name="FK_operaciones_modulo" Association="Self.FK_operaciones_modulo">
+      <End Role="modulo" EntitySet="modulo" />
+      <End Role="operaciones" EntitySet="operaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rol_operacion_operaciones" Association="Self.FK_rol_operacion_operaciones">
+      <End Role="operaciones" EntitySet="operaciones" />
+      <End Role="rol_operacion" EntitySet="rol_operacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rol_operacion_rol" Association="Self.FK_rol_operacion_rol">
+      <End Role="rol" EntitySet="rol" />
+      <End Role="rol_operacion" EntitySet="rol_operacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_usuario_rol" Association="Self.FK_usuario_rol">
+      <End Role="rol" EntitySet="rol" />
+      <End Role="usuario" EntitySet="usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

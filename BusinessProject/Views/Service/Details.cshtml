@@ -1,0 +1,90 @@
+﻿@model BusinessProject.Models.Service
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Service</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nameService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nameService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descriptionService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descriptionService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.startDateService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.startDateService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.endDateService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.endDateService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.valueService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.valueService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.commissionPercentageBusinessService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.commissionPercentageBusinessService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.commissionPercentageSalesManService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.commissionPercentageSalesManService)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imageUrlServices)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imageUrlServices)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imageServices)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imageServices)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idService }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,42 @@
+﻿@model BusinessProject.Models.customerService
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>customerService</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sessionsNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sessionsNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customer.nameCustomer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer.nameCustomer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Service.nameService)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Service.nameService)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idCustomerService }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

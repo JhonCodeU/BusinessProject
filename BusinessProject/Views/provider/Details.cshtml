@@ -1,0 +1,66 @@
+﻿@model BusinessProject.Models.provider
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>provider</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nameProvider)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nameProvider)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.addressProvider)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.addressProvider)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emailAddressProvider)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emailAddressProvider)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phoneProvider)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phoneProvider)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descriptionProvider)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descriptionProvider)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.typeProvider.nameTypeProvider)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.typeProvider.nameTypeProvider)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idProvider }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
