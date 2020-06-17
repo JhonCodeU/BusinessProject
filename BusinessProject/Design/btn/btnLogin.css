@@ -1,0 +1,21 @@
+﻿
+input[type="submit"], input[type="reset"], input[type="button"], button, .button {
+    float: right;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #4272d7;
+    border-color: #46b8da;
+}
+.btn-info a{
+    color: #fff;
+    text-decoration: none;
+}
+.navbar .collapse ul li a{
+    text-decoration: none;
+}
+
+.navbar .navbar-header a {
+    text-decoration: none;
+}

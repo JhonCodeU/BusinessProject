@@ -129,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccesoController.cs" />
+    <Compile Include="Controllers\closeSessionController.cs" />
     <Compile Include="Controllers\customersController.cs" />
     <Compile Include="Controllers\customerServiceController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
@@ -230,6 +231,7 @@
     <Content Include="Design\bootstrap_4.5.0\js\bootstrap.bundle.min.js" />
     <Content Include="Design\bootstrap_4.5.0\js\bootstrap.js" />
     <Content Include="Design\bootstrap_4.5.0\js\bootstrap.min.js" />
+    <Content Include="Design\btn\btnLogin.css" />
     <Content Include="Design\Error\css\style.css" />
     <Content Include="Design\Error\readme.txt" />
     <Content Include="Design\Home\assets\css\font-awesome.min.css" />
@@ -532,6 +534,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\closeSession\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
