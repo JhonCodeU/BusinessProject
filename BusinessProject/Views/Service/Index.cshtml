@@ -10,6 +10,14 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
+@using (Html.BeginForm("Index", "Service", FormMethod.Get))
+{
+    <p>
+        Buscar Por Nombre: @Html.TextBox("Search")
+        <input type="submit" value="Search" />
+    </p>
+}
+
 <div class="box">
     @foreach (var item in Model)
     {

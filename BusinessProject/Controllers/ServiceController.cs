@@ -15,11 +15,20 @@ namespace BusinessProject.Controllers
         private BusinessProjectEntities db = new BusinessProjectEntities();
 
         // GET: Service
-        public ActionResult Index()
+        // GET: Cliente
+        public ActionResult Index(string search)
         {
-            return View(db.Services.ToList());
-        }
+            var service = from s in db.Services
+                         select s;
 
+            if (!String.IsNullOrEmpty(search))
+            {
+
+                service = service.Where(s => s.nameService.Contains(search));
+            }
+
+            return View(service.ToList());
+        }
         // GET: Service/Details/5
         public ActionResult Details(int? id)
         {
