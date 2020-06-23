@@ -22,7 +22,7 @@
 
                     <div class="box">
                         <div><h4 class="card-title"> @Html.DisplayFor(modelItem => item.nameService)</h4></div>
-                        <div><h4 class="card-title"> $@Html.DisplayFor(modelItem => item.valueService)</h4>  </div>
+                        <div><h4 class="card-title"> @Html.DisplayFor(modelItem => item.valueService)</h4>  </div>
                     </div>
                     <p class="card-text">@Html.DisplayFor(modelItem => item.descriptionService)</p>
                     @Html.ActionLink("Edit", "Edit", new { id = item.idService }) |
