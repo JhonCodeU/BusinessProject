@@ -12,6 +12,19 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .button
     color: #fff;
     text-decoration: none;
 }
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    margin: 0 15px;
+}
+
+.btn-success a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .navbar .collapse ul li a{
     text-decoration: none;
 }

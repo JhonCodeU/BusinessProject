@@ -1,4 +1,5 @@
 ﻿using System;
+using BusinessProject.Filters;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -15,10 +16,19 @@ namespace BusinessProject.Controllers
         private BusinessProjectEntities db = new BusinessProjectEntities();
 
         // GET: ServiceSalesman
-        public ActionResult Index()
+        [AuthorizeUser(idOperacion: 3)]
+        public ActionResult Index(string search)
         {
-            var serviceSalesmen = db.ServiceSalesmen.Include(s => s.SalesMan).Include(s => s.Service);
-            return View(serviceSalesmen.ToList());
+            var ServiceSalesmen = from s in db.ServiceSalesmen
+                                  select s;
+
+            if (!String.IsNullOrEmpty(search))
+            {
+
+                ServiceSalesmen = ServiceSalesmen.Where(s => s.fkIdSalesman.ToString().Contains(search));
+            }
+
+            return View(ServiceSalesmen.ToList());
         }
 
         // GET: ServiceSalesman/Details/5

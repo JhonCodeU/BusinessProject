@@ -15,15 +15,13 @@ namespace BusinessProject.Controllers
             return View();
         }
 
-        [AuthorizeUser(idOperacion: 2)]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
-
-        [AuthorizeUser(idOperacion: 3)]
+        
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

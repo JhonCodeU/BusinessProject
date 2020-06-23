@@ -144,6 +144,7 @@
     <Compile Include="Controllers\SalesManController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\ServiceSalesmanController.cs" />
+    <Compile Include="Controllers\systemManagerController.cs" />
     <Compile Include="Controllers\typeProviderController.cs" />
     <Compile Include="Controllers\usuarioController.cs" />
     <Compile Include="Filters\AuthorizeUser.cs" />
@@ -231,6 +232,7 @@
     <Content Include="Design\bootstrap_4.5.0\js\bootstrap.bundle.min.js" />
     <Content Include="Design\bootstrap_4.5.0\js\bootstrap.js" />
     <Content Include="Design\bootstrap_4.5.0\js\bootstrap.min.js" />
+    <Content Include="Design\btn\botones.css" />
     <Content Include="Design\btn\btnLogin.css" />
     <Content Include="Design\Error\css\style.css" />
     <Content Include="Design\Error\readme.txt" />
@@ -294,6 +296,10 @@
     <Content Include="Design\login\vendor\select2\select2.js" />
     <Content Include="Design\login\vendor\select2\select2.min.css" />
     <Content Include="Design\login\vendor\select2\select2.min.js" />
+    <Content Include="Design\Manager\default.css" />
+    <Content Include="Design\Manager\fonts.css" />
+    <Content Include="Design\Manager\fonts\fontawesome-social-webfont.svg" />
+    <Content Include="Design\Manager\fonts\fontawesome-webfont.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -432,6 +438,13 @@
     <Content Include="Design\bootstrap_4.5.0\js\bootstrap.bundle.min.js.map" />
     <Content Include="Design\bootstrap_4.5.0\js\bootstrap.js.map" />
     <Content Include="Design\bootstrap_4.5.0\js\bootstrap.min.js.map" />
+    <Content Include="Design\Manager\fonts\fontawesome-social-webfont.eot" />
+    <Content Include="Design\Manager\fonts\fontawesome-social-webfont.ttf" />
+    <Content Include="Design\Manager\fonts\fontawesome-social-webfont.woff" />
+    <Content Include="Design\Manager\fonts\fontawesome-webfont.eot" />
+    <Content Include="Design\Manager\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Design\Manager\fonts\fontawesome-webfont.woff" />
+    <Content Include="Design\Manager\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -531,6 +544,7 @@
     <Content Include="Views\Acceso\Login.cshtml" />
     <Content Include="Views\Shared\_LayoutLogin.cshtml" />
     <Content Include="Views\Error\UnauthorizedOperation.cshtml" />
+    <Content Include="Views\systemManager\System.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

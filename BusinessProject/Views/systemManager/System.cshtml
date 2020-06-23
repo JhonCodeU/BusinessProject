@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "System";
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="@Url.Content("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900") rel="stylesheet" />
+    <link href=@Url.Content("~/Design/Manager/default.css") rel="stylesheet" type="text/css" media="all" />
+    <link href=@Url.Content("~/Design/Manager/fonts.css") rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body>
+    <br /><br /><br />
+    <div id="wrapper">
+        <br />
+        <h2 style="text-align:center">Settings</h2>
+        <div id="featured-wrapper">
+            <div id="featured" class="container">
+                <div class="column1">
+                    <span class="icon icon-key"></span>
+                    <div class="title">
+                        <h2>@Html.ActionLink("Provider", "Index", "provider")</h2>
+                    </div>
+                    <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Pellentesque viverra vulputate enim. Aliquam erat volutpat.</p>
+                </div>
+                <div class="column2">
+                    <span class="icon icon-legal"></span>
+                    <div class="title">
+                        <h2>@Html.ActionLink("Module", "Index", "modulo")</h2>
+                    </div>
+                    <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Pellentesque viverra vulputate enim. Aliquam erat volutpat.</p>
+                </div>
+                <div class="column3">
+                    <span class="icon icon-unlock"></span>
+                    <div class="title">
+                        <h2>@Html.ActionLink("Users", "Index", "usuario")</h2>       
+                    </div>
+                    <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Pellentesque viverra vulputate enim. Aliquam erat volutpat.</p>
+                </div>
+                <div class="column4">
+                    <span class="icon icon-wrench"></span>
+                    <div class="title">
+                        <h2>@Html.ActionLink("Roles", "Index", "rol")</h2>
+                    </div>
+                    <p>In posuere eleifend odio. Quisque semper augue mattis wisi. Pellentesque viverra vulputate enim. Aliquam erat volutpat.</p>
+                </div>
+            </div>
+            <div id="extra" class="container">
+                <h2>Maecenas vitae orci vitae tellus feugiat eleifend</h2>
+                <span>Quisque dictum integer nisl risus, sagittis convallis, rutrum id, congue, and nibh</span>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

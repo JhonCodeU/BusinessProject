@@ -1,45 +1,47 @@
 ﻿@model IEnumerable<BusinessProject.Models.ServiceSalesman>
 
-@{
-    ViewBag.Title = "Index";
-}
+@{ ViewBag.Title = "Index"; }
 
 <h2>Index</h2>
-
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.totalCommissionServiceSalesman)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SalesMan.nameSalesman)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Service.nameService)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.totalCommissionServiceSalesman)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SalesMan.nameSalesman)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Service.nameService)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idServiceSalesman }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idServiceSalesman }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idServiceSalesman })
-        </td>
-    </tr>
-}
+@using (Html.BeginForm("Index", "ServiceSalesman", FormMethod.Get))
+{
+    <p>
+        Cedula Vendedor : @Html.TextBox("Search")
+        <input type="submit" class="button" value="Search" />
+    </p>}
+<div class="box">
+    @foreach (var item in Model)
+    {
 
-</table>
+
+        <div class="col-3">
+
+            <div class="card shadonbox" style="width:400px; padding:10px">
+                <div class="center-block">
+                    <h1>Ventas</h1>
+                </div>
+                <div class="card-body" style="padding:10px;">
+
+                    <div class="box">
+
+
+                        <div><h4 class="card-title"><u>Asesor:</u> @Html.DisplayFor(modelItem => item.SalesMan.nameSalesman)</h4></div>
+
+                        <div><h4 class="card-title"><u>Servicio:</u> @Html.DisplayFor(modelItem => item.Service.nameService)</h4>  </div>
+
+
+                        <div><p class="card-text"><u>Comision:</u> $@Html.DisplayFor(modelItem => item.totalCommissionServiceSalesman)</p></div>
+
+
+                        @Html.ActionLink("Edit", "Edit", new { id = item.idServiceSalesman }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.idServiceSalesman }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.idServiceSalesman })
+
+                    </div>
+                </div>
+            </div>
+        </div>      }

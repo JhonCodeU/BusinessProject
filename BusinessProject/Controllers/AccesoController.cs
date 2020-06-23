@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -24,6 +25,12 @@ namespace BusinessProject.Controllers
                     var oUser = (from d in db.usuarios
                                  where d.email == User.Trim() && d.password == Pass.Trim()
                                  select d).FirstOrDefault();
+
+                    var salesman = (from d in db.ServiceSalesmen
+                                 select d.idServiceSalesman);
+
+                    Console.WriteLine(salesman);
+
                     if (oUser == null)
                     {
                         ViewBag.Error = "Usuario o contraseña invalida";

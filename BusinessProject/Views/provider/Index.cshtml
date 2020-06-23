@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Index";
 }
+    <link rel="stylesheet" href=@Url.Content("~/Design/btn/btnLogin.css")>
 
 <h2>Index</h2>
 
@@ -61,3 +62,10 @@
 }
 
 </table>
+
+<div>
+    <button type="button" class="btn btn-info">@Html.ActionLink("Type provider", "Index", "typeProvider")</button>
+    
+    <button type="button" class="btn btn-success">@Html.ActionLink("Provider Services", "Index", "ProviderService")</button>
+
+</div>
